@@ -1,7 +1,6 @@
 %h1.message Ok, Just Do It
 
 .training-menu
-  = @training_menu
-
+  = link_to "#{@training_menu}",trains_path, class: "train-btn", method: :post
 
 = link_to "ログアウト", destroy_user_session_path, class: "btn btn-logout",method: :delete
