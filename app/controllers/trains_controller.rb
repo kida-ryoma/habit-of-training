@@ -6,6 +6,11 @@ class TrainsController < ApplicationController
   end
 
   def new
+
+    @training = Train.find_by(user_id: current_user.id)
+    if @training.present?
+      redirect_to action: :index
+    end
   end
 
   def create
