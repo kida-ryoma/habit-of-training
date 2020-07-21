@@ -7,7 +7,7 @@ class TrainsController < ApplicationController
   end
 
   def new
-
+    @user = current_user
     @training = Train.find_by(user_id: current_user.id)
     if @training.present?
       redirect_to action: :index
