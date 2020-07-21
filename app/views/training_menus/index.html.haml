@@ -1,9 +1,9 @@
 .title-message
-  %h1 自宅筋トレを習慣化しよう
+  %h1 The Habit of Training
 .login
-  = link_to new_user_session_path do
-    ログイン
+  = link_to new_user_session_path, class: "btn btn-login" do
+    Log in
 .signup
-  %p Don't have an account? 
-  = link_to new_user_registration_path do
+  %p.signup-message Don't have an account? 
+  = link_to new_user_registration_path, class: "btn btn-signup" do
     Sign Up

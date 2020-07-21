@@ -1,5 +1,6 @@
 class TrainsController < ApplicationController
   require "date"
+  before_action :authenticate_user!
   before_action :get_menu, only: [:new, :index]
 
   def index
