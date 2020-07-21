@@ -1,2 +1,7 @@
-%h1 Ok, Just Do It
-= link_to "ログアウト", destroy_user_session_path, method: :delete
+%h1.message Ok, Just Do It
+
+.training-menu
+  = @training_menu
+
+
+= link_to "ログアウト", destroy_user_session_path, class: "btn btn-logout",method: :delete
