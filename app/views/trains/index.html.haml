@@ -1,6 +1,6 @@
-%h1.message #{current_user.name} Cool, You Did It !
+%h1.message-done #{current_user.name} Cool, You Did It !
 
-.training-menu
+.training-menu-done
   = @training_menu
 
 = link_to "ログアウト", destroy_user_session_path, class: "btn btn-logout",method: :delete

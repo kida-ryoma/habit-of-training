@@ -8,7 +8,7 @@ class TrainsController < ApplicationController
 
   def new
     @user = current_user
-    @training = Train.find_by(user_id: current_user.id)
+    @training = Train.created_today.find_by(user_id: current_user.id)
     if @training.present?
       redirect_to action: :index
     end

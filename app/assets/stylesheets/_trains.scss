@@ -7,11 +7,37 @@
   color: black;
 }
 
+.message-done{
+  font-size: 50px;
+  display: block;
+  // background-color:#DDFFFF;
+  text-align: center;
+  padding: 20px 0;
+  color: black;
+  font-weight: bold;
+}
+
 .training-menu{
   height: 500px;
   width: 500px;
   border-radius: 50%;
   border: solid 3px skyblue;
+  text-align: center;
+  line-height: 500px;
+  font-size: 40px;
+  margin: 100px auto;
+  a{
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+}
+
+.training-menu-done{
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: solid 10px skyblue;
   text-align: center;
   line-height: 500px;
   font-size: 40px;
