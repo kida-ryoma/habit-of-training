@@ -1,0 +1,2 @@
+class TrainingMenuHard < ApplicationRecord
+end
