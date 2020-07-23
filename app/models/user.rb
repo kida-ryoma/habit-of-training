@@ -4,4 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :trains
+  has_many :training_menu_easies, through: :user_training_menu_easies
+  has_many :training_menu_easies
+  has_many :training_menu_normals, through: :user_training_menu_normals
+  has_many :training_menu_normals
+  has_many :training_menu_hards, through: :user_training_menu_hards
+  has_many :training_menu_hards
 end

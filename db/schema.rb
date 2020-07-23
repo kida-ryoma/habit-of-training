@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_053129) do
+ActiveRecord::Schema.define(version: 2020_07_23_062439) do
 
   create_table "training_menu_easies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "menu"
@@ -39,6 +39,33 @@ ActiveRecord::Schema.define(version: 2020_07_23_053129) do
     t.index ["user_id"], name: "index_trains_on_user_id"
   end
 
+  create_table "user_training_menu_easies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "training_menu_easy_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["training_menu_easy_id"], name: "index_user_training_menu_easies_on_training_menu_easy_id"
+    t.index ["user_id"], name: "index_user_training_menu_easies_on_user_id"
+  end
+
+  create_table "user_training_menu_hards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "training_menu_hard_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["training_menu_hard_id"], name: "index_user_training_menu_hards_on_training_menu_hard_id"
+    t.index ["user_id"], name: "index_user_training_menu_hards_on_user_id"
+  end
+
+  create_table "user_training_menu_normals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "training_menu_normal_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["training_menu_normal_id"], name: "index_user_training_menu_normals_on_training_menu_normal_id"
+    t.index ["user_id"], name: "index_user_training_menu_normals_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,4 +80,10 @@ ActiveRecord::Schema.define(version: 2020_07_23_053129) do
   end
 
   add_foreign_key "trains", "users"
+  add_foreign_key "user_training_menu_easies", "training_menu_easies"
+  add_foreign_key "user_training_menu_easies", "users"
+  add_foreign_key "user_training_menu_hards", "training_menu_hards"
+  add_foreign_key "user_training_menu_hards", "users"
+  add_foreign_key "user_training_menu_normals", "training_menu_normals"
+  add_foreign_key "user_training_menu_normals", "users"
 end
