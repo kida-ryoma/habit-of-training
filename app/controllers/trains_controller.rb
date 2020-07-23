@@ -2,7 +2,7 @@ class TrainsController < ApplicationController
   require "date"
   before_action :authenticate_user!
   before_action :get_menu, only: [:new, :index]
-  before_action :get_login_user, only: [:index,new]
+  before_action :get_login_user, only: [:index,:new]
 
   def index
   end
@@ -15,7 +15,7 @@ class TrainsController < ApplicationController
   end
 
   def create
-    Train.create(done: "yes", user_id: current_user.id)
+    Train.create(done: "yes", user_id: current_user.id, start_time: Date.today)
     redirect_to trains_path
   end
 

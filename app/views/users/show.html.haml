@@ -1,2 +1,9 @@
-= month_calendar do |date|
+.callendar__message 
+  #{current_user.name}, This Is What You Did
+
+= month_calendar events: @trainings do |date,trainings|
   = date
+  - trainings.each do |training|
+    .done-training
+      = training.done
+     
