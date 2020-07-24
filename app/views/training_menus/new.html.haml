@@ -1,0 +1,9 @@
+%h1.select-difficulty #{current_user.name}, Select Your Course
+
+%ul.difficulties
+  %li.difficulty
+    = link_to "EASY", easy_menu_training_menus_path
+  %li.difficulty
+    = link_to "NORMAL", normal_menu_training_menus_path
+  %li.difficulty
+    = link_to "HARD", hard_menu_training_menus_path
