@@ -20,10 +20,23 @@ class TrainsController < ApplicationController
   end
 
   private
+
   def get_menu
-    now = Time.now
-    today = now.wday + 1
-    @training_menu = TrainingMenu.find(today).menu
+    @user_difficult = Difficulty.find_by(user_id: current_user.id)
+    @user_difficulty = @user_difficult.difficult
+    if @user_difficulty == "easy"
+      now = Time.now
+      today = now.wday + 1
+      @training_menu = TrainingMenu.find(today).menu
+    elsif @user_difficulty == "normal"
+      now = Time.now
+      today = now.wday + 8
+      @training_menu = TrainingMenu.find(today).menu
+    else
+      now = Time.now
+      today = now.wday + 15
+      @training_menu = TrainingMenu.find(today).menu
+    end
   end
 
   def get_login_user
