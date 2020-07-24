@@ -6,4 +6,6 @@
   - trainings.each do |training|
     .done-training
       - training.done
+
+= link_to "ログアウト", destroy_user_session_path, class: "btn btn-logout",method: :delete
      
