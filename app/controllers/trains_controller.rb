@@ -22,7 +22,7 @@ class TrainsController < ApplicationController
   private
 
   def get_menu
-    @user_difficult = Difficulty.find_by(user_id: current_user.id)
+    @user_difficult = Difficulty.find(current_user.id)
     @user_difficulty = @user_difficult.difficult
     if @user_difficulty == "easy"
       now = Time.now
