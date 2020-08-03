@@ -1,24 +1,38 @@
-# README
+Name
+HabitOfTraining
+====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Overview
+HabitOfTraining is a application that can help you to build a habit of training(work out)
 
-Things you may want to cover:
+## Description
+You do just one menu a day. After selecting the course you want to do,we give you a menu which reflects the course you chose.
 
-* Ruby version
+## Demo
+This is the demo gif
+https://gyazo.com/75ab8ad2100789dc8c8e2b96e45ca829
 
-* System dependencies
 
-* Configuration
+## Features
+This is very simple so that you never wonder what menu you should do every each day.
+We also can motivates you every each day from your own calendar that shows how long you have been doing.
 
-* Database creation
+## Requirement
+ruby, '2.6.5'
+'rails', '~> 6.0.0'
+"simple_calendar", "~> 2.0"
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+## Install
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contribution
 
-* Deployment instructions
+## Licence
 
-* ...
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+
+
+Enjoy building the habit of training!
+ 
+Thank you!
