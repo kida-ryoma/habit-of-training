@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: habit_of_training_production
   username: habit_of_training
   password: <%= ENV['HABIT_OF_TRAINING_DATABASE_PASSWORD'] %>
